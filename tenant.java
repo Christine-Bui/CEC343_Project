@@ -1,8 +1,15 @@
-public class tenant {
-    String name;
-    int room;
-    public tenant(){
+//includes:
+// get methods
+// constructor
+// set methods
 
+
+public class tenant {
+    private String name;
+    private int room;
+    public tenant(){
+        this.name = "";
+        this.room = 000;
     }
 
     public tenant(String name, int room){
