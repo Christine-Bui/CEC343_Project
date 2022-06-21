@@ -1,6 +1,7 @@
-public class tenantList extends tenant {
-    tenant tenants[]; 
+import java.util.ArrayList;
 
+public class tenantList extends tenant {
+    ArrayList<tenant> tenants = new ArrayList<tenant>();
    public tenantList(){
 
    }
