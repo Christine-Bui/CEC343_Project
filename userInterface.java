@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class userInterface{
+public class userInterface extends tenant{
     static Scanner x = new Scanner(System.in);
     static String input;
     public static void display(){
@@ -47,6 +47,10 @@ public class userInterface{
             switch(input){
                 case "t":
                     //add tenant
+                    tenant tenantName = new tenant();
+                    System.out.print("Enter tenant's name: ");
+                    input = x.nextLine();
+                    tenantName.setName(input);
                     quit = true;
                     break;
                 case "r":
@@ -83,6 +87,8 @@ public class userInterface{
                 case "q":
                     System.out.println("Have a good day!");
                     quit = true;
+                    break;
+                default:
                     break;
             }       
         
