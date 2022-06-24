@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
-public class userInterface extends tenant{
+public class userInterface extends tenantList{
     static Scanner x = new Scanner(System.in);
     static String input;
+    static tenantList tL = new tenantList();
     public static void display(){
         boolean quit = false;
         while(quit == false){
@@ -15,6 +16,7 @@ public class userInterface extends tenant{
             switch(input){
                 case "t":
                     //display tenant
+                    tL.displayTenant();
                     quit = true;
                     break;
                 case "r":
@@ -51,6 +53,13 @@ public class userInterface extends tenant{
                     System.out.print("Enter tenant's name: ");
                     input = x.nextLine();
                     tenantName.setName(input);
+
+                    tenant tenantRoom = new tenant();
+                    Scanner y = new Scanner(System.in);
+                    System.out.print("Enter tenant's room number: ");
+                    int roomNum = y.nextInt();
+                    tenantRoom.setRoomNum(roomNum);
+                    tL.addTenant(tenantName.getName(), tenantRoom.getRoomNum());
                     quit = true;
                     break;
                 case "r":

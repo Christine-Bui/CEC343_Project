@@ -5,11 +5,11 @@
 
 
 public class tenant {
-    private String name;
-    private int room;
+    String name;
+    int room;
     public tenant(){
         this.name = "";
-        this.room = 000;
+        this.room = 0;
     }
 
     public tenant(String name, int room){
@@ -31,5 +31,9 @@ public class tenant {
 
     public void setRoomNum(int room){
         this.room = room;
+    }
+
+    public String toString(){
+        return(this.room + " " +  this.name);
     }
 }
