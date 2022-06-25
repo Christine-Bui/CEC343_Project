@@ -4,7 +4,7 @@
 // set methods
 
 
-public class tenant {
+public class tenant implements Comparable<tenant>{
     String name;
     int room;
     public tenant(){
@@ -31,6 +31,17 @@ public class tenant {
 
     public void setRoomNum(int room){
         this.room = room;
+    }
+
+    public int compareTo(tenant t){
+        int compareInt = this.name.compareTo(t.name);
+        if(compareInt < 0){
+            return -1;
+        }
+        else{
+            return 1;
+        }
+
     }
 
     public String toString(){
