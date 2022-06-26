@@ -1,8 +1,8 @@
+import java.util.*;
 
 public class expense {
     private double amount;
-    private int day;
-    private int month;
+    private Date date; 
     private String payee;
     private String category;
 
@@ -11,17 +11,13 @@ public class expense {
         this.amount = 0;
         this.payee = "";
         this.category = "";
-        this.day = 0;
-        this.month = 0;
     };
 
     //loaded constructor
-    public expense(int month, int day, String payee, double amount, String category){
+    public expense(double amount, Date date, String payee){
         this.amount = amount;
-        this.month = month;
-        this.day = day;
+        this.date = date;
         this.payee = payee;
-        this.category = category;
     }
     //set and get functions
     /////////////////////////////////////////////////////////
@@ -32,20 +28,12 @@ public class expense {
         this.amount = amount;
     }
     
-    public int getDay(){
-        return day;
-    }
-    public void setDay(int day){
-        this.day = day;
-    }
-
-    public int getMonth() {
-        return month;
-    }
-
-    public void setMonth(int month) {
-        this.month = month;
-    }
+    // public String getDate(){
+    //     return this.date;
+    // }
+    // public void setDate(String date){
+    //     this.date = date;
+    // }
 
     public String getPayee(){
         return this.payee;
@@ -59,12 +47,14 @@ public class expense {
     }
 
     public String getCategory() {
-        return this.category;
+        return category;
     }
     ////////////////////////////////////////////////////////
     // Display
     public String toString()
    {
-   return this.month + "/" + this.day + "\t" + this.payee + "\t" + this.amount + "\t" + this.category;
+    System.out.println("Date\tPayee\tCategory");
+    System.out.println("----------------------------------------");
+   return super.toString() + this.date + "\t" + this.payee + "\t" + this.amount + "\t" + this.category;
    }
 }
