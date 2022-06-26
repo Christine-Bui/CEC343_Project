@@ -9,8 +9,8 @@ public class expenseRecord{
     public expenseRecord(){
     }
 
-    public void addExpense(int m, int d, String category, String payee, double amount){
-        expense e = new expense(m, d, category, payee, amount);
+    public void addExpense(int month, int day, String category, String payee, double amount){
+        expense e = new expense(month, day, category, payee, amount);
     }
 
     //constructor, create the list
