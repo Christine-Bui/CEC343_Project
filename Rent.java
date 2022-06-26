@@ -1,4 +1,4 @@
-public class Rent extends annualReport
+public class Rent extends rentRecord
 {
-    
+
 }
