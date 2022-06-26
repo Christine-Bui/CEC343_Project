@@ -51,5 +51,11 @@ public class expense {
         return category;
     }
     ////////////////////////////////////////////////////////
-
+    // Display
+    public String toString()
+   {
+    System.out.println("Date\tPayee\tCategory");
+    System.out.println("----------------------------------------");
+   return this.date + "\t" + this.payee + "\t" + this.amount + "\t" + this.category;
+   }
 }
