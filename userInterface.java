@@ -72,6 +72,7 @@ public class userInterface extends tenantList{
                     expense month = new expense();
                     System.out.print("Enter month (1-12): ");
                     int m = x.nextInt();
+                    month.setMonth(m);
 
                     expense day = new expense();
                     Scanner f = new Scanner(System.in);
