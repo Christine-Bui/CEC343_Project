@@ -1,36 +1,28 @@
+import java.util.*;
 
 public class expenseRecord{
-    private expense[] expenses;
+    // private expense[] expenses;
     // List<expense> expenses = new ArrayList<expense>();
     //expense expenses[] = new expense[5];
     // int i = 0;
+    ArrayList<expense> expenses = new ArrayList<expense>();
     public expenseRecord(){
-        expenses = new expense[10];
     }
 
-    public expenseRecord(expense[] expenses){
-        this.expenses = expenses;
+    public void addExpense(double amount, int m, int d, String payee, String category){
+        expense e = new expense(amount, m, d, payee, category);
     }
 
     //constructor, create the list
     // public void expenseRecord(){}
-
-    public expense[] getExpense(){
-        // expense e = new expense();
-        return expenses;
-    }
-
-    public void setExpense(expense[] expenses){
-        this.expenses = expenses;
-    }
     
-    public String toString()
-	{   String display = expenses.toString();
-        for(expense e: expenses)
+    public void displayExpenses()
+	{
+        System.out.println("Date\tPayee\tCategory");
+        System.out.println("----------------------------------------");
+        for(expense E: expenses)
 		{
-			display = display + e.toString();
+			System.out.println(E);
 		}
-		display = display + "-------------------------------------" + "\n";
-        return display;
     }
 }
