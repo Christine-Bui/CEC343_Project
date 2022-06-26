@@ -45,6 +45,6 @@ public class tenant implements Comparable<tenant>{
     }
 
     public String toString(){
-        return(this.room + " " +  this.name);
+        return(this.room + "\t" +  this.name);
     }
 }
