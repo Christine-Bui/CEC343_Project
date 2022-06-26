@@ -2,21 +2,22 @@ import java.util.*;
 
 public class expense {
     private double amount;
-    private Date date; 
+    private Calendar date = new GregorianCalendar(); 
     private String payee;
     private String category;
 
     // constructor
     public expense(){
         this.amount = 0;
+        date = new GregorianCalendar();
         this.payee = "";
         this.category = "";
     };
 
     //loaded constructor
-    public expense(double amount, Date date, String payee){
+    public expense(double amount, int m, int d, String payee){
         this.amount = amount;
-        this.date = date;
+        date.set(m,d);
         this.payee = payee;
     }
     //set and get functions
@@ -28,12 +29,12 @@ public class expense {
         this.amount = amount;
     }
     
-    // public String getDate(){
-    //     return this.date;
-    // }
-    // public void setDate(String date){
-    //     this.date = date;
-    // }
+    public String getDate(){
+        return date.get(Calendar.MONTH)+"/"+ date.get(Calendar.DATE);
+    }
+    public void setDate(int m, int d){
+        date.set(m,d);
+    }
 
     public String getPayee(){
         return this.payee;
@@ -50,11 +51,5 @@ public class expense {
         return category;
     }
     ////////////////////////////////////////////////////////
-    // Display
-    public String toString()
-   {
-    System.out.println("Date\tPayee\tCategory");
-    System.out.println("----------------------------------------");
-   return super.toString() + this.date + "\t" + this.payee + "\t" + this.amount + "\t" + this.category;
-   }
+
 }
