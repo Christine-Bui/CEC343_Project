@@ -16,7 +16,7 @@ public class expense {
     };
 
     //loaded constructor
-    public expense(int month, int day, String category, String payee, double amount){
+    public expense(int month, int day, String payee, double amount, String category){
         this.amount = amount;
         this.month = month;
         this.day = day;

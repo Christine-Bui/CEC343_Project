@@ -26,6 +26,7 @@ public class userInterface extends tenantList{
                     break;
                 case "e":
                     //display expense
+                    eR.displayExpenses();
                     quit = true;
                     break;
                 case "a":
@@ -98,7 +99,7 @@ public class userInterface extends tenantList{
                     int a = o.nextInt();
                     amount.setAmount(a);
 
-                    eR.addExpense(month.getMonth(), day.getDay(), category.getCategory(), payee.getPayee(), amount.getAmount());
+                    eR.addExpense(month.getMonth(), day.getDay(), payee.getPayee(), amount.getAmount(),  category.getCategory());
                     quit = true;
                     break;
                 default:

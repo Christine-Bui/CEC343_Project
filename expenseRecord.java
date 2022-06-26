@@ -9,8 +9,18 @@ public class expenseRecord{
     public expenseRecord(){
     }
 
-    public void addExpense(int month, int day, String category, String payee, double amount){
-        expense e = new expense(month, day, category, payee, amount);
+    public void addExpense(int month, int day, String payee, double amount, String category)
+    {
+        expense e = new expense(month, day, payee, amount, category);
+        if(expenses.contains(e))
+        {
+            System.out.println("expense already exists");
+    
+        }
+        else
+        {
+            expenses.add(e);        
+       }
     }
 
     //constructor, create the list
@@ -18,7 +28,7 @@ public class expenseRecord{
     
     public void displayExpenses()
 	{
-        System.out.println("Date\tPayee\tCategory");
+        System.out.println("Date\tPayee\tAmount\tCategory");
         System.out.println("----------------------------------------");
         for(expense E: expenses)
 		{
