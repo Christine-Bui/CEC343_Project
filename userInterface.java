@@ -4,6 +4,7 @@ public class userInterface extends tenantList{
     static Scanner x = new Scanner(System.in);
     static String input;
     static tenantList tL = new tenantList();
+    static expenseRecord eR = new expenseRecord();
     public static void display(){
         boolean quit = false;
         while(quit == false){
@@ -68,6 +69,35 @@ public class userInterface extends tenantList{
                     break;
                 case "e":
                     //expense
+                    expense month = new expense();
+                    System.out.print("Enter month (1-12): ");
+                    int m = x.nextInt();
+
+                    expense day = new expense();
+                    Scanner f = new Scanner(System.in);
+                    System.out.print("Enter day (1-31): ");
+                    int d = f.nextInt();
+                    day.setDay(d);
+
+                    expense category = new expense();
+                    Scanner k = new Scanner(System.in);
+                    System.out.print("Enter expense category (Repairing, Utilities): ");
+                    String c = k.nextLine();
+                    category.setCategory(c);
+
+                    expense payee = new expense();
+                    Scanner b = new Scanner(System.in);
+                    System.out.print("Enter payee (Bob's Hardware, Big Electric Co): ");
+                    String p = b.nextLine();
+                    payee.setPayee(p);
+
+                    expense amount = new expense();
+                    Scanner o = new Scanner(System.in);
+                    System.out.print("Enter amount (39.95): ");
+                    int a = o.nextInt();
+                    amount.setAmount(a);
+
+                    eR.addExpense(month.getMonth(), day.getDay(), category.getCategory(), payee.getPayee(), amount.getAmount());
                     quit = true;
                     break;
                 default:
