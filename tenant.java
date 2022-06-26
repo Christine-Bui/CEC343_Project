@@ -5,11 +5,11 @@
 
 
 public class tenant implements Comparable<tenant>{
-    String name;
-    int room;
+    private String name;
+    private int room;
     public tenant(){
-        this.name = "";
-        this.room = 0;
+        /*this.name = "";
+        this.room = 0;*/
     }
 
     public tenant(String name, int room){
@@ -41,10 +41,21 @@ public class tenant implements Comparable<tenant>{
         else{
             return 1;
         }
+    }
+    public boolean equals(Object obj){
+        if(obj == this)
+            return true;
+        if(!(obj instanceof tenant))
+            return false;
+        final tenant other = (tenant) obj;
+        return name.equals(other.getName());
+    }
 
+    public int hashCode(){
+        return name.hashCode();
     }
 
     public String toString(){
-        return(this.room + " " +  this.name);
+        return(this.room + "\t" +  this.name);
     }
 }
