@@ -15,7 +15,7 @@ public class expense {
     };
 
     //loaded constructor
-    public expense(double amount, int m, int d, String payee){
+    public expense(int m, int d, String category, String payee, double amount){
         this.amount = amount;
         date.set(m,d);
         this.payee = payee;
@@ -54,8 +54,6 @@ public class expense {
     // Display
     public String toString()
    {
-    System.out.println("Date\tPayee\tCategory");
-    System.out.println("----------------------------------------");
    return this.date + "\t" + this.payee + "\t" + this.amount + "\t" + this.category;
    }
 }
