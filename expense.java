@@ -1,24 +1,27 @@
-import java.util.*;
 
 public class expense {
     private double amount;
-    private Calendar date = new GregorianCalendar(); 
+    private int day;
+    private int month;
     private String payee;
     private String category;
 
     // constructor
     public expense(){
         this.amount = 0;
-        date = new GregorianCalendar();
         this.payee = "";
         this.category = "";
+        this.day = 0;
+        this.month = 0;
     };
 
     //loaded constructor
-    public expense(int m, int d, String category, String payee, double amount){
+    public expense(int month, int day, String category, String payee, double amount){
         this.amount = amount;
-        date.set(m,d);
+        this.month = month;
+        this.day = day;
         this.payee = payee;
+        this.category = category;
     }
     //set and get functions
     /////////////////////////////////////////////////////////
@@ -29,11 +32,19 @@ public class expense {
         this.amount = amount;
     }
     
-    public String getDate(){
-        return date.get(Calendar.MONTH)+"/"+ date.get(Calendar.DATE);
+    public int getDay(){
+        return day;
     }
-    public void setDate(int m, int d){
-        date.set(m,d);
+    public void setDay(int day){
+        this.day = day;
+    }
+
+    public int getMonth() {
+        return month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
     }
 
     public String getPayee(){
@@ -48,12 +59,12 @@ public class expense {
     }
 
     public String getCategory() {
-        return category;
+        return this.category;
     }
     ////////////////////////////////////////////////////////
     // Display
     public String toString()
    {
-   return this.date + "\t" + this.payee + "\t" + this.amount + "\t" + this.category;
+   return this.month + "/" + this.day + "\t" + this.payee + "\t" + this.amount + "\t" + this.category;
    }
 }
