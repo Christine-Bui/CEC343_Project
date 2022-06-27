@@ -7,12 +7,12 @@ public class annualReport{
         this.rR = renRec;
         this.eR = expRec;
     }
-    
+
     //ook
     public double sumRent(){
         double sum=0;
         for(Rent R : rR.rental){
-            //sum+=R.getAmount();
+            sum+=R.getAmount();
         }
         return sum;
     }
