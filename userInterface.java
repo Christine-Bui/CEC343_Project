@@ -13,7 +13,7 @@ public class userInterface {
     public static void display(){
         boolean quit = false;
         while(quit == false){
-            System.out.println("Enter 't' to display tenants" );
+            System.out.println("\nEnter 't' to display tenants" );
             System.out.println("Enter 'r' to display rents" );
             System.out.println("Enter 'e' to display expenses" );
             System.out.println("Enter 'a' to annual report" );
