@@ -1,7 +1,5 @@
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 import java.lang.String;
-import java.util.Scanner;
 
 public class userInterface {
     static Scanner x = new Scanner(System.in);
@@ -9,6 +7,7 @@ public class userInterface {
     static tenantList tL = new tenantList();
 
     static expenseRecord eR = new expenseRecord();
+    static annualReport aR = new annualReport();
 
 
     public static void display(){
@@ -37,6 +36,7 @@ public class userInterface {
                     break;
                 case "a":
                     //display annual report
+                    aR.displayAnnualReport();
                     quit = true;
                     break;
                 default:
