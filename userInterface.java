@@ -49,7 +49,7 @@ public class userInterface {
     public static void add(){
         boolean quit = false;
         while(quit == false){
-            System.out.println("\nEnter 't' to add tenant" );
+            System.out.println("Enter 't' to add tenant" );
             System.out.println("Enter 'r' to record rent payment" );
             System.out.println("Enter 'e' to record expense" );
             input = x.nextLine();
@@ -102,7 +102,7 @@ public class userInterface {
                     expense amount = new expense();
                     Scanner o = new Scanner(System.in);
                     System.out.print("Enter amount (39.95): ");
-                    int a = o.nextInt();
+                    double a = o.nextDouble();
                     amount.setAmount(a);
 
                     eR.addExpense(month.getMonth(), day.getDay(), payee.getPayee(), amount.getAmount(),  category.getCategory());
