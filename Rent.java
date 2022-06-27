@@ -1,4 +1,4 @@
-public class Rent extends rentRecord
+public class Rent
 {
 
 }

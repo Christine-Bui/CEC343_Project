@@ -7,5 +7,10 @@ public class rentRecord
     public void addRent(int month, int day, String name, int room, double rent_amount)
     {
         Rent r = new Rent(month, day, name, room, rent_amount);
+
+        if(rental.contains(r))
+        {
+            System.out.println("Rent record exists already.");
+        }
     }
 }
