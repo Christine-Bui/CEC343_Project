@@ -1,10 +1,16 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.lang.String;
 import java.util.Scanner;
 
-public class userInterface extends tenantList{
+public class userInterface {
     static Scanner x = new Scanner(System.in);
     static String input;
     static tenantList tL = new tenantList();
+
     static expenseRecord eR = new expenseRecord();
+
+
     public static void display(){
         boolean quit = false;
         while(quit == false){
