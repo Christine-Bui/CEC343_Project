@@ -26,25 +26,31 @@ public class annualReport{
 
 
     //hashmap<type1,type2> name = new Hashmap<>();
+    //e_C = expense map divided by category to add up cost by each category
+    //expense category
+    //returns a Hashmap, used to display by category
+    public HashMap expenseCategory(){
+        
+        HashMap<String,Double> e_C = new HashMap<String,Double>();
+        
+        for(expense E : eR.expenses){
+            String category = E.getCategory();
+            Double price = e_C.containsKey(category) ? e_C.get(category) : 0;
+            price+=E.getAmount();
+            e_C.put(category, price);
+        }
+        return e_C;
+    }
+
+    //used to calculate profit
     public double sumExpenses(){
         double sum=0;
-        HashMap<String,Double> expense_Category = new HashMap<String,Double>();
         
-        int i = 0; 
         for(expense E : eR.expenses){
-            expense_Category.put(E.getCategory(),E.getAmount());
+            sum+=E.getAmount();
         }
         return sum;
     }
-
-    // public double sumExpenses(){
-    //     double sum=0;
-        
-    //     for(expense E : eR.expenses){
-    //         sum+=E.getAmount();
-    //     }
-    //     return sum;
-    // }
     
     //annualReport.profit();
     public double profit(){
