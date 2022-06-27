@@ -4,9 +4,9 @@ public class rentRecord
 {
     ArrayList<Rent> rental = new ArrayList<Rent>();
 
-    public void addRent(int month, int day, String name, int room, double rent_amount)
+    public void addRent(int month, String name, double rent_amount)
     {
-        Rent r = new Rent(month, day, name, room, rent_amount);
+        Rent r = new Rent(month, name, rent_amount);
 
         if(rental.contains(r))
         {
@@ -16,5 +16,10 @@ public class rentRecord
         {
             rental.add(r);
         }
+    }
+
+    public void displayRent()
+    {
+
     }
 }
