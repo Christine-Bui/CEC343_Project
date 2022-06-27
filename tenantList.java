@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.lang.String;
 
-public class tenantList {
+public class tenantList extends tenant{
     ArrayList<tenant> tenants = new ArrayList<tenant>();
     //tenant tenants[] = new tenant[5];
    public tenantList(){
