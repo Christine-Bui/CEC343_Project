@@ -49,7 +49,7 @@ public class userInterface {
     public static void add(){
         boolean quit = false;
         while(quit == false){
-            System.out.println("Enter 't' to add tenant" );
+            System.out.println("\nEnter 't' to add tenant" );
             System.out.println("Enter 'r' to record rent payment" );
             System.out.println("Enter 'e' to record expense" );
             input = x.nextLine();
@@ -119,7 +119,7 @@ public class userInterface {
         boolean quit = false;
         
         while(quit == false){
-            System.out.println("Enter 'i' to input data" );
+            System.out.println("\nEnter 'i' to input data" );
             System.out.println("Enter 'd' to display data" );
             System.out.println("Enter 'q' to quit" );
             input = x.nextLine();
