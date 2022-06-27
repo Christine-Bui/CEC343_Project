@@ -26,7 +26,7 @@ public class tenantList extends tenant{
 
    public void displayTenant(){
     //System.out.println(tenants.toString());
-    System.out.println("Apt#  Tenant Name" + "\n" +
+    System.out.println("Apt#\tTenant Name" + "\n" +
     "-------------------");
     for(tenant T: tenants){
         System.out.println(T);
