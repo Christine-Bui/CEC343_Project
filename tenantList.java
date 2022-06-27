@@ -33,4 +33,8 @@ public class tenantList extends tenant{
     }
     }
 
+    public ArrayList<tenant> getList(){
+        return tenants;
+    }
+
 }

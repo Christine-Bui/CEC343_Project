@@ -2,6 +2,7 @@ public class Rent{
     private double amount;
     private String name;
     private int month;
+   
     public Rent(){
         
     }

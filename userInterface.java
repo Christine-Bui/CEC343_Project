@@ -8,6 +8,7 @@ public class userInterface {
 
     static expenseRecord eR = new expenseRecord();
     static annualReport aR = new annualReport();
+    static rentRecord rR = new rentRecord();
 
 
     public static void display(){
@@ -27,6 +28,7 @@ public class userInterface {
                     break;
                 case "r":
                     //display payment
+                    rR.displayRent();
                     quit = true;
                     break;
                 case "e":
@@ -49,7 +51,7 @@ public class userInterface {
     public static void add(){
         boolean quit = false;
         while(quit == false){
-            System.out.println("Enter 't' to add tenant" );
+            System.out.println("\nEnter 't' to add tenant" );
             System.out.println("Enter 'r' to record rent payment" );
             System.out.println("Enter 'e' to record expense" );
             input = x.nextLine();
@@ -71,7 +73,8 @@ public class userInterface {
                     quit = true;
                     break;
                 case "r":
-                    //rent payment
+                    //rental payment
+                    rR.addRent("", 12, 12);
                     quit = true;
                     break;
                 case "e":
@@ -119,7 +122,7 @@ public class userInterface {
         boolean quit = false;
         
         while(quit == false){
-            System.out.println("\nEnter 'i' to input data" );
+            System.out.println("Enter 'i' to input data" );
             System.out.println("Enter 'd' to display data" );
             System.out.println("Enter 'q' to quit" );
             input = x.nextLine();
