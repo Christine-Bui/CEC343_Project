@@ -12,5 +12,9 @@ public class rentRecord
         {
             System.out.println("Rent record exists already.");
         }
+        else
+        {
+            rental.add(r);
+        }
     }
 }
