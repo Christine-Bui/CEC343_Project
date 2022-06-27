@@ -21,6 +21,11 @@ public class rentRecord extends tenantList{
 
     public void displayRent()
     {
-
+        System.out.println("Tenant's Name\tMonth Paid\tAmount Paid");
+        System.out.println("--------------------------------------");
+        for(Rent R: rental)
+        {
+            System.out.println(R);
+        }
     }
 }
