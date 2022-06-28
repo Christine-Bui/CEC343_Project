@@ -3,6 +3,8 @@ import java.util.*;
 public class annualReport{
     private rentRecord rR = new rentRecord();
     private expenseRecord eR = new expenseRecord();
+
+    //store category name and amount
     HashMap<String,Double> e_C = new HashMap<String,Double>();
 
 
@@ -45,6 +47,7 @@ public class annualReport{
             price+=E.getAmount();
             this.e_C.put(category, price);
         }
+        
         //return e_C;
     }
 
@@ -72,10 +75,23 @@ public class annualReport{
         System.out.println("Rent: " + this.sumRent());
 
         //print expense category summary
+        this.expenseCategory();
         System.out.println("Expenses");
         for (String k : e_C.keySet()){
             System.out.printf("%s: %.2f%n", k, e_C.get(k));
         }
+        // 
+        // e_C.entrySet().forEach( entry -> {
+        //     System.out.println( entry.getKey() + " : " + entry.getValue() );
+        // });
+        // Set set = e_C.entrySet();
+        // Iterator i = set.iterator();
+        // // Display elements
+        // while(i.hasNext()) {
+        //     Map.Entry me = (Map.Entry)i.next();
+        //     System.out.print(me.getKey() + ": ");
+        //     System.out.println(me.getValue());
+        // }
 
         //print profit
         System.out.println("\nBalance: " + this.profit());
