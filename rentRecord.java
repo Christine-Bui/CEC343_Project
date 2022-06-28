@@ -2,7 +2,7 @@ import java.util.*;
 
 public class rentRecord extends tenantList{
     ArrayList<Rent> rental = new ArrayList<Rent>();
-    ArrayList<ArrayList<Integer>> initial= new ArrayList<ArrayList<Integer>>();
+    ArrayList<ArrayList<Integer>> initial= new ArrayList<ArrayList<Integer>>(2);
     ArrayList<Integer> payments;
     tenantList tL = new tenantList();
     int rN;
@@ -17,23 +17,29 @@ public class rentRecord extends tenantList{
 
     public void addRent(String name, int rent_amount, int month)
     {
+        //System.out.println("adding new tenant...");
         Rent r = new Rent(name, rent_amount, month);
         ArrayList<tenant> x = tL.getList();
+
+        //System.out.println("getting room number...");
         for(tenant t: x){
             //if name is in tenant list, then get room number
             if(t.getName().equals(name)){
                 rN = t.getRoomNum();
             }
         }
+
+        //System.out.println("adding to the list...");
         for(int i = 0; i <= initial.size()-1; i++){
+            System.out.println("interation " +i);
             if(initial.get(i).get(0) == rN){
                 initial.get(i).set(month, rent_amount);
             }
             else{
-                payments = new ArrayList<Integer>(Collections.nCopies(13, 0));
-                payments.set(0, rN);
-                payments.set(month, rent_amount);
-                initial.add(payments);
+                this.payments = new ArrayList<Integer>(Collections.nCopies(13, 0));
+                this.payments.set(0, rN);
+                this.payments.set(month, rent_amount);
+                this.initial.add(payments);
             }
         }
 
