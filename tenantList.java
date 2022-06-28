@@ -4,11 +4,9 @@ import java.lang.String;
 
 public class tenantList extends tenant{
     ArrayList<tenant> tenants = new ArrayList<tenant>();
-    //tenant tenants[] = new tenant[5];
    public tenantList(){
-    
-   }
 
+   }
    public void addTenant(String name, int room){
     //tenants.add(t);
     tenant t = new tenant(name, room);
@@ -22,6 +20,8 @@ public class tenantList extends tenant{
         tenants.add(t);        
     }
     Collections.sort(tenants);
+
+    
    }
 
    public void displayTenant(){
@@ -36,5 +36,4 @@ public class tenantList extends tenant{
     public ArrayList<tenant> getList(){
         return tenants;
     }
-
 }

@@ -8,13 +8,13 @@ public class userInterface {
 
     static expenseRecord eR = new expenseRecord();
     static annualReport aR = new annualReport();
-    static rentRecord rR = new rentRecord();
+    static rentRecord rR = new rentRecord(tL);
 
 
     public static void display(){
         boolean quit = false;
         while(quit == false){
-            System.out.println("\nEnter 't' to display tenants" );
+            System.out.println("\nEnter 't' to display tenants" ); 
             System.out.println("Enter 'r' to display rents" );
             System.out.println("Enter 'e' to display expenses" );
             System.out.println("Enter 'a' to annual report" );
