@@ -93,10 +93,10 @@ public class userInterface {
                     break;
                 case "e":
                     //expense
-                
                     expense month = new expense();
+                    Scanner q = new Scanner(System.in);
                     System.out.print("\nEnter month (1-12): ");
-                    int m = x.nextInt();
+                    int m = q.nextInt();
                     month.setMonth(m);
 
                     expense day = new expense();
