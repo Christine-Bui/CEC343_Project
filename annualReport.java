@@ -40,8 +40,10 @@ public class annualReport{
     //expense category
     //no return, affects class attributes
     public void expenseCategory(){
-        //HashMap<String,Double> e_C = new HashMap<String,Double>();
-        for(expense E : eR.expenses){
+        //for each expense in the list of expenses, we get the category
+        //then see if the hashmap has the key, then get the value, add it to the price
+        //then add the new key value pair to the hashmap, or rather, replace them.
+        for(expense E : eR.getExpenses()){
             String category = E.getCategory();
             Double price = this.e_C.containsKey(category) ? this.e_C.get(category) : 0;
             price+=E.getAmount();

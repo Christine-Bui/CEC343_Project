@@ -23,6 +23,7 @@ public class expenseRecord{
        }
     }
 
+
     //constructor, create the list
     // public void expenseRecord(){}
     
@@ -34,5 +35,9 @@ public class expenseRecord{
 		{
 			System.out.println(E);
 		}
+    }
+
+    public ArrayList<expense> getExpenses() {
+        return expenses;
     }
 }
