@@ -1,9 +1,10 @@
 import java.util.*;
 
 public class annualReport{
-    private rentRecord rR;
-    private expenseRecord eR;
+    private rentRecord rR = new rentRecord();
+    private expenseRecord eR = new expenseRecord();
     HashMap<String,Double> e_C = new HashMap<String,Double>();
+
 
 
     //empty constructor
@@ -18,11 +19,15 @@ public class annualReport{
         
     }
 
-    //ook
+    //
     public double sumRent(){
         double sum=0;
-        for(Rent R : rR.rental){
-            sum+=R.getAmount();
+        ArrayList<ArrayList<Integer>> rentList = rR.getRent();
+        for(ArrayList<Integer> room : rentList){
+            for(int i=1; i<room.size(); i++){
+                sum+=room.get(i);
+            }
+            //sum+=R.getAmount();
         }
         return sum;
     }

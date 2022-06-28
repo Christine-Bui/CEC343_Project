@@ -7,8 +7,8 @@ public class userInterface {
     static tenantList tL = new tenantList();
 
     static expenseRecord eR = new expenseRecord();
-    static annualReport aR = new annualReport();
     static rentRecord rR = new rentRecord(tL);
+    static annualReport aR = new annualReport(rR, eR);
 
 
     public static void display(){

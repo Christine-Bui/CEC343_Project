@@ -16,6 +16,10 @@ public class rentRecord extends tenantList{
         this.tL = tL;
     }
 
+    public ArrayList<ArrayList<Integer>> getRent(){
+        return this.initial;
+    };
+
     public void addRent(String name, int rent_amount, int month)
     {
         //System.out.println("adding new tenant...");
@@ -30,7 +34,7 @@ public class rentRecord extends tenantList{
             }
         }
 
-        System.out.println("adding to the list...");
+        //System.out.println("adding to the list...");
         //if the size of the list is 0, we add the first element to it
         if(initial.size() == 0){
             this.payments = new ArrayList<Integer>(Collections.nCopies(13, 0));
@@ -39,7 +43,7 @@ public class rentRecord extends tenantList{
             this.initial.add(payments);
         }else{
             for(int i = 0; i <= initial.size()-1; i++){
-                System.out.println("interation " +i);
+                //System.out.println("interation " +i);
                 if(initial.get(i).get(0) == rN){
                     initial.get(i).set(month, rent_amount);
                 }
