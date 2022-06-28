@@ -81,6 +81,8 @@ public class annualReport{
         for (String k : e_C.keySet()){
             System.out.printf("%s: %.2f%n", k, e_C.get(k));
         }
+        //reset hashmap
+        e_C = new HashMap<String,Double>();
         // 
         // e_C.entrySet().forEach( entry -> {
         //     System.out.println( entry.getKey() + " : " + entry.getValue() );
