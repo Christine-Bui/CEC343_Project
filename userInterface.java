@@ -60,7 +60,7 @@ public class userInterface {
                 case "t":
                     //add tenant
                     tenant tenantName = new tenant();
-                    System.out.print("Enter tenant's name: ");
+                    System.out.print("\nEnter tenant's name: ");
                     input = x.nextLine();
                     tenantName.setName(input);
 
@@ -76,7 +76,7 @@ public class userInterface {
                     //rental payment
                     Rent rent = new Rent();
                     Scanner r = new Scanner(System.in);
-                    System.out.print("Enter tenant name: ");
+                    System.out.print("\nEnter tenant name: ");
                     String name = r.nextLine();
                     rent.setName(name);
 
@@ -95,7 +95,7 @@ public class userInterface {
                     //expense
                 
                     expense month = new expense();
-                    System.out.print("Enter month (1-12): ");
+                    System.out.print("\nEnter month (1-12): ");
                     int m = x.nextInt();
                     month.setMonth(m);
 
@@ -137,7 +137,7 @@ public class userInterface {
         boolean quit = false;
         
         while(quit == false){
-            System.out.println("Enter 'i' to input data" );
+            System.out.println("\nEnter 'i' to input data" );
             System.out.println("Enter 'd' to display data" );
             System.out.println("Enter 'q' to quit" );
             input = x.nextLine();

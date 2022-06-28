@@ -38,7 +38,6 @@ public class rentRecord extends tenantList{
             this.payments.set(month, rent_amount);
             this.initial.add(payments);
         }else{
-
             for(int i = 0; i <= initial.size()-1; i++){
                 System.out.println("interation " +i);
                 if(initial.get(i).get(0) == rN){
