@@ -48,7 +48,6 @@ public class annualReport{
             this.e_C.put(category, price);
         }
         
-        //return e_C;
     }
 
     //used to calculate profit
