@@ -28,8 +28,8 @@ public class expenseRecord{
     
     public void displayExpenses()
 	{
-        System.out.println("Date\tPayee\tAmount\tCategory");
-        System.out.println("----------------------------------------");
+        System.out.println("Date\t\tPayee\t\tAmount\t\tCategory");
+        System.out.println("---------------------------------------------------");
         for(expense E: expenses)
 		{
 			System.out.println(E);

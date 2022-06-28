@@ -65,6 +65,6 @@ public class expense {
     // Display
     public String toString()
    {
-   return this.month + "/" + this.day + "\t" + this.payee + "\t" + this.amount + "\t" + this.category;
+   return this.month + "/" + this.day + "\t\t" + this.payee + "\t" + this.amount + "\t\t" + this.category;
    }
 }

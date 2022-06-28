@@ -71,6 +71,5 @@ public class rentRecord extends tenantList{
             .trim());      
         }
         
-        
     }
 }
