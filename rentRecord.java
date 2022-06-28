@@ -38,27 +38,38 @@ public class rentRecord extends tenantList{
 
         //if the size of the list is 0, we add the first element to it
         if(initial.size() == 0){
+            //System.out.println();
             this.payments = new ArrayList<Integer>(Collections.nCopies(13, 0));
             this.payments.set(0, rN);
             this.payments.set(month, rent_amount);
             this.initial.add(payments);
         }else{
+            boolean alreadyHave = false;
+            //check for the whole list to see if the room number is already in there
             for(int i = 0; i <= initial.size()-1; i++){
                 //System.out.println("interation " +i);
+                //check if the room number is already in the list
                 if((initial.get(i).get(0).equals(rN)) & (initial.get(i).get(0) == rN)){
                     initial.get(i).set(month, rent_amount);
-                }
-                else{
-                    this.payments = new ArrayList<Integer>(Collections.nCopies(13, 0));
-                    this.payments.set(0, rN);
-                    this.payments.set(month, rent_amount);
-                    this.initial.add(payments);
+                    alreadyHave = true;
+                    break;
+                } 
             }
+            //if the room number is not in there, then create new entry
+            if (!alreadyHave){
+                this.payments = new ArrayList<Integer>(Collections.nCopies(13, 0));
+                this.payments.set(0, rN);
+                this.payments.set(month, rent_amount);
+                this.initial.add(payments);
+            }
+
+                //room number is not in the list, continue or add new
+                
             }
         }
 
         
-    }
+    
 
     public void displayRent()
     {
