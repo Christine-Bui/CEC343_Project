@@ -1,21 +1,21 @@
 public class Rent{
-    private double amount;
+    private int amount;
     private String name;
     private int month;
    
     public Rent(){
         
     }
-    public Rent(String name, double amount, int month){
+    public Rent(String name, int amount, int month){
         this.name = name;
         this.amount = amount;
         this.month = month;
     }
-    public double getAmount(){
+    public int getAmount(){
         return amount;
     }
 
-    public void setAmount(double amount){
+    public void setAmount(int amount){
         this.amount = amount;
     }
 

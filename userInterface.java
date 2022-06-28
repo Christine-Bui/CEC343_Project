@@ -74,11 +74,26 @@ public class userInterface {
                     break;
                 case "r":
                     //rental payment
-                    rR.addRent("", 12, 12);
+                    Rent rent = new Rent();
+                    Scanner r = new Scanner(System.in);
+                    System.out.print("Enter tenant name: ");
+                    String name = r.nextLine();
+                    rent.setName(name);
+
+                    System.out.print("Enter month of payment: ");
+                    int Month = r.nextInt();
+                    rent.setMonth(Month);
+
+                    System.out.print("Enter rent amount: ");
+                    int rentAmount = r.nextInt();
+                    rent.setAmount(rentAmount);
+
+                    rR.addRent(rent.getName(), rent.getAmount(), rent.getMonth());
                     quit = true;
                     break;
                 case "e":
                     //expense
+                
                     expense month = new expense();
                     System.out.print("Enter month (1-12): ");
                     int m = x.nextInt();
