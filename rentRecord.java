@@ -44,7 +44,7 @@ public class rentRecord extends tenantList{
         }else{
             for(int i = 0; i <= initial.size()-1; i++){
                 //System.out.println("interation " +i);
-                if(initial.get(i).get(0) == rN){
+                if((initial.get(i).get(0).equals(rN)) & (initial.get(i).get(0) == rN)){
                     initial.get(i).set(month, rent_amount);
                 }
                 else{
