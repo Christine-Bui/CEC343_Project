@@ -61,13 +61,15 @@ public class rentRecord extends tenantList{
 
     public void displayRent()
     {
-        System.out.println("Apt. #" + "\t" + "Month Paid" + "\t" + "Amount Paid");
-        System.out.println("--------------------------------------");
+        System.out.println("AptNo\t Jan\t Feb\t Mar\t Apr\t May\t Jun\t Jul\t Aug\t Sep\t Oct\t Nov\t Dec");
+        System.out.println("------------------------------------------------------------------------------------------------------");
         for(ArrayList<Integer> r: initial)
         {
-            System.out.println(r);
+            System.out.println(r.toString().replace(",", "\t")  
+            .replace("[", "")  
+            .replace("]", "")  
+            .trim());      
         }
-        //System.out.println(initial);
         
         
     }
